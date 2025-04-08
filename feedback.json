@@ -84,7 +84,7 @@
     },
     {
       "grading/tests/test_penalty.py::test_deprecated_tags_detected": [
-        "Encontramos tags obsoletas, como <center> ou <font>. Remova essas tags e use alternativas modernas.",
+        "Encontramos tags obsoletas, como `center` ou `font`. Remova essas tags e use alternativas modernas.",
         "Não há tags obsoletas no código, excelente!"
       ]
     },
