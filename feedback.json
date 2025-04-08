@@ -1,0 +1,110 @@
+{
+  "base_tests": [
+    {
+      "grading/tests/test_base.py::test_html_structure": [
+        "A estrutura HTML está corretamente definida. Excelente trabalho!",
+        "A estrutura HTML está faltando tags essenciais como <html>, <head>, ou <body>. Certifique-se de que o esqueleto básico da página HTML esteja presente."
+      ]
+    },
+    {
+      "grading/tests/test_base.py::test_table_tags_present": [
+        "Ótimo! Sua tabela está corretamente implementada com as tags <table>, <tr>, <td>, e <th>.",
+        "Sua tabela está faltando tags essenciais como <table>, <tr>, <td>, ou <th>. Revise sua implementação da tabela."
+      ]
+    },
+    {
+      "grading/tests/test_base.py::test_caption_present": [
+        "Você incluiu corretamente o elemento <caption> na tabela.",
+        "Falta o elemento <caption> na tabela. Lembre-se de incluir a legenda na tabela."
+      ]
+    },
+    {
+      "grading/tests/test_base.py::test_colspan_present": [
+        "Atributo colspan encontrado corretamente. Ótimo!",
+        "Não encontrei o atributo colspan. Adicione-o a uma célula para melhorar a acessibilidade e estrutura da tabela."
+      ]
+    },
+    {
+      "grading/tests/test_base.py::test_rowspan_present": [
+        "Atributo rowspan encontrado corretamente. Bom trabalho!",
+        "Não encontrei o atributo rowspan. Adicione-o a uma célula para melhorar a tabela."
+      ]
+    },
+    {
+      "grading/tests/test_base.py::test_border_present": [
+        "A tabela possui borda visível, excelente!",
+        "A tabela não tem borda visível. Tente adicionar uma borda utilizando o atributo 'border' ou estilo interno."
+      ]
+    },
+    {
+      "grading/tests/test_base.py::test_no_external_css": [
+        "Nenhum CSS externo foi usado, conforme solicitado. Ótimo!",
+        "O arquivo está utilizando CSS externo. Lembre-se de não incluir links para arquivos CSS externos."
+      ]
+    },
+    {
+      "grading/tests/test_base.py::test_unclosed_tags": [
+        "Não há tags <tr> não fechadas, excelente!",
+        "Há uma tag <tr> não fechada no HTML. Verifique se todas as tags de abertura têm suas respectivas tags de fechamento."
+      ]
+    }
+  ],
+  "bonus_tests": [
+    {
+      "grading/tests/test_bonus.py::test_caption_is_meaningful": [
+        "A legenda da tabela está bem definida e significativa. Excelente!",
+        "A legenda da tabela está muito genérica. Tente usar um título mais descritivo, como 'Cronograma de Eventos' em vez de apenas 'Tabela'."
+      ]
+    },
+    {
+      "grading/tests/test_bonus.py::test_more_than_two_rows_and_columns": [
+        "Sua tabela tem mais de 2 linhas e colunas, ótimo trabalho!",
+        "Sua tabela tem menos de 2 linhas ou colunas. Tente adicionar mais linhas ou colunas para atender aos requisitos."
+      ]
+    },
+    {
+      "grading/tests/test_bonus.py::test_indentation_and_formatting": [
+        "Boa formatação! O arquivo tem mais de 10 linhas e a indentação está consistente.",
+        "O arquivo tem menos de 10 linhas ou a indentação não está consistente. Tente adicionar mais conteúdo e melhorar a formatação."
+      ]
+    },
+    {
+      "grading/tests/test_bonus.py::test_additional_inline_or_internal_styles": [
+        "Ótimo uso de estilos internos e inline. Seu código está bem estilizado!",
+        "Não foram encontrados estilos internos ou inline. Adicione mais estilos, como cores de fundo, fontes e alinhamento de texto."
+      ]
+    }
+  ],
+  "penalty_tests": [
+    {
+      "grading/tests/test_penalty.py::test_external_css_detected": [
+        "Não há CSS externo, como esperado. Ótimo!",
+        "O arquivo contém links para CSS externo. Remova as referências a arquivos CSS externos, como solicitado."
+      ]
+    },
+    {
+      "grading/tests/test_penalty.py::test_deprecated_tags_detected": [
+        "Não há tags obsoletas no código, excelente!",
+        "Encontramos tags obsoletas, como <center> ou <font>. Remova essas tags e use alternativas modernas."
+      ]
+    },
+    {
+      "grading/tests/test_penalty.py::test_empty_cells_detected": [
+        "Não há células vazias, excelente!",
+        "Existem células vazias em sua tabela. Preencha todas as células ou remova as que não são necessárias."
+      ]
+    },
+    {
+      "grading/tests/test_penalty.py::test_placeholder_content_detected": [
+        "Não há conteúdo de marcador de posição, ótimo!",
+        "Encontramos conteúdo de marcador de posição, como 'lorem' ou 'teste'. Substitua por conteúdo real."
+      ]
+    },
+    {
+      "grading/tests/test_penalty.py::test_single_row_or_column_detected": [
+        "Sua tabela tem várias linhas e colunas, muito bom!",
+        "Sua tabela tem apenas uma linha ou uma coluna. Considere adicionar mais linhas ou colunas para torná-la mais robusta."
+      ]
+    }
+  ]
+}
