@@ -4,13 +4,13 @@ import argparse
 from utils.result_exporter import notify_classroom
 
 parser = argparse.ArgumentParser(description="Process token argument.")
-parser.add_argument("--token", type=str, required=True, help="GitHub token")
-args = parser.parse_args()
+#parser.add_argument("--token", type=str, required=True, help="GitHub token")
+#args = parser.parse_args()
 
-github_token = args.token
+#github_token = args.token
 
 result = get_final_score()
+print(result)
 
-
-notify_classroom(result, github_token)
+#notify_classroom(result, github_token)
 
