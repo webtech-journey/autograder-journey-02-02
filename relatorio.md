@@ -1,13 +1,17 @@
 # 🧪 Relatório de Avaliação – Autograder HTML
 
-**Data:** 08/04/2025 16:03
+**Data:** 08/04/2025 16:08
 
-**Nota Final:** `100.0/100`
+**Nota Final:** `82.22222222222223/100`
 **Status:** ✅ Aprovado
 
 ---
 ## ✅ Requisitos Obrigatórios (80%)
-- Todos os requisitos básicos foram atendidos. Excelente trabalho!
+- Foram encontrados `2` problemas nos requisitos obrigatórios. Veja abaixo os testes que falharam:
+  - ⚠️ **Falhou no teste**: `grading/tests/test_base.py::test_colspan_present`
+    - **Melhoria sugerida**: None
+  - ⚠️ **Falhou no teste**: `grading/tests/test_base.py::test_unclosed_tags`
+    - **Melhoria sugerida**: None
 
 ## ⭐ Itens de Destaque (20%)
 - Você conquistou `4` bônus! Excelente trabalho nos detalhes adicionais!
