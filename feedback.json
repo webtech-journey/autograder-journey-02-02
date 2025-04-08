@@ -78,32 +78,32 @@
   "penalty_tests": [
     {
       "grading/tests/test_penalty.py::test_external_css_detected": [
-        "Não há CSS externo, como esperado. Ótimo!",
-        "O arquivo contém links para CSS externo. Remova as referências a arquivos CSS externos, como solicitado."
+        "O arquivo contém links para CSS externo. Remova as referências a arquivos CSS externos, como solicitado.",
+        "Não há CSS externo, como esperado. Ótimo!"
       ]
     },
     {
       "grading/tests/test_penalty.py::test_deprecated_tags_detected": [
-        "Não há tags obsoletas no código, excelente!",
-        "Encontramos tags obsoletas, como <center> ou <font>. Remova essas tags e use alternativas modernas."
+        "Encontramos tags obsoletas, como <center> ou <font>. Remova essas tags e use alternativas modernas.",
+        "Não há tags obsoletas no código, excelente!"
       ]
     },
     {
       "grading/tests/test_penalty.py::test_empty_cells_detected": [
-        "Não há células vazias, excelente!",
-        "Existem células vazias em sua tabela. Preencha todas as células ou remova as que não são necessárias."
+        "Existem células vazias em sua tabela. Preencha todas as células ou remova as que não são necessárias.",
+         "Não há células vazias, excelente!"
       ]
     },
     {
       "grading/tests/test_penalty.py::test_placeholder_content_detected": [
-        "Não há conteúdo de marcador de posição, ótimo!",
-        "Encontramos conteúdo de marcador de posição, como 'lorem' ou 'teste'. Substitua por conteúdo real."
+        "Encontramos conteúdo de marcador de posição, como 'lorem' ou 'teste'. Substitua por conteúdo real.",
+        "Não há conteúdo de marcador de posição, ótimo!"
       ]
     },
     {
       "grading/tests/test_penalty.py::test_single_row_or_column_detected": [
-        "Sua tabela tem várias linhas e colunas, muito bom!",
-        "Sua tabela tem apenas uma linha ou uma coluna. Considere adicionar mais linhas ou colunas para torná-la mais robusta."
+        "Sua tabela tem apenas uma linha ou uma coluna. Considere adicionar mais linhas ou colunas para torná-la mais robusta.",
+        "Sua tabela tem várias linhas e colunas, muito bom!"
       ]
     }
   ]

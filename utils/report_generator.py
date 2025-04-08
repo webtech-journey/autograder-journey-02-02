@@ -2,7 +2,11 @@ import json
 import os
 from datetime import datetime
 
-
+def get_key_value(list, name):
+    for item in list:
+        for key in item:
+            if key == name:
+                return item[key]
 def generate_md(base, bonus, penalty,final_score,feedback_file="feedback.json"):
     """
     Generate a Markdown report for autograding feedback.
@@ -36,7 +40,7 @@ def generate_md(base, bonus, penalty,final_score,feedback_file="feedback.json"):
         feedback += f"- Foram encontrados `{len(base['failed'])}` problemas nos requisitos obrigatórios. Veja abaixo os testes que falharam:\n"
         for test_name in base["failed"]:
             # Get the feedback from the JSON structure based on pass/fail
-            passed_feedback = tests_feedback["base_tests"][0].get(test_name, [None, None])[1]  # Failed feedback
+            passed_feedback = get_key_value(tests_feedback["base_tests"],test_name)[1]  # Failed feedback
             feedback += f"  - ⚠️ **Falhou no teste**: `{test_name}`\n"
             feedback += f"    - **Melhoria sugerida**: {passed_feedback}\n"
 
@@ -46,7 +50,7 @@ def generate_md(base, bonus, penalty,final_score,feedback_file="feedback.json"):
         feedback += f"- Você conquistou `{len(bonus['passed'])}` bônus! Excelente trabalho nos detalhes adicionais!\n"
         for passed_test in bonus["passed"]:
             # Get the feedback for passed bonus tests
-            passed_feedback = tests_feedback["bonus_tests"][0].get(passed_test, [None, None])[0]  # Passed feedback
+            passed_feedback = get_key_value(tests_feedback["bonus_tests"],passed_test)[0]  # Failed feedback
             feedback += f"  - 🌟 **Testes bônus passados**: `{passed_test}`\n"
             feedback += f"    - {passed_feedback}\n"
     else:
@@ -54,11 +58,11 @@ def generate_md(base, bonus, penalty,final_score,feedback_file="feedback.json"):
 
     # Penalty Feedback
     feedback += "\n## ❌ Problemas Detectados (Descontos de até -30%)\n"
-    if len(penalty["failed"]) > 0:
+    if len(penalty["failed"]) != 5:
         feedback += f"- Foram encontrados `{len(penalty['failed'])}` problemas que acarretam descontos. Veja abaixo os testes penalizados:\n"
-        for failed_test in penalty["failed"]:
+        for failed_test in penalty["passed"]:
             # Get the feedback for failed penalty tests
-            failed_feedback = tests_feedback["penalty_tests"][0].get(failed_test, [None, None])[1]  # Failed feedback
+            failed_feedback = get_key_value(tests_feedback["penalty_tests"],failed_test)[0]  # Failed feedback
             feedback += f"  - ⚠️ **Falhou no teste de penalidade**: `{failed_test}`\n"
             feedback += f"    - **Correção sugerida**: {failed_feedback}\n"
     else:
