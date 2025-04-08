@@ -25,6 +25,7 @@ def generate_md(base, bonus, penalty,final_score,author,feedback_file="feedback.
     # Load feedback data from the JSON file
     with open(path.getFilePath(feedback_file), "r", encoding="utf-8") as file:
         tests_feedback = json.load(file)
+    print(tests_feedback["base_tests"])
     passed = True if final_score >= 70 else False
     # Initialize feedback
     feedback = f"# 🧪 Relatório de Avaliação – Autograder HTML - {author}\n\n"
