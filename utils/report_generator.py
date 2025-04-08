@@ -7,7 +7,7 @@ def get_key_value(list, name):
         for key in item:
             if key == name:
                 return item[key]
-def generate_md(base, bonus, penalty,final_score,feedback_file="feedback.json"):
+def generate_md(base, bonus, penalty,final_score,author,feedback_file="feedback.json"):
     """
     Generate a Markdown report for autograding feedback.
     Takes dictionaries for base, bonus, and penalty with keys `passed` and `failed` containing test names.
@@ -26,7 +26,7 @@ def generate_md(base, bonus, penalty,final_score,feedback_file="feedback.json"):
 
     passed = True if final_score >= 70 else False
     # Initialize feedback
-    feedback = f"# 🧪 Relatório de Avaliação – Autograder HTML\n\n"
+    feedback = f"# 🧪 Relatório de Avaliação – Autograder HTML - {author}\n\n"
     feedback += f"**Data:** {datetime.now().strftime('%d/%m/%Y %H:%M')}\n\n"
     feedback += f"**Nota Final:** `{final_score}/100`\n"
     feedback += f"**Status:** {'✅ Aprovado' if passed else '❌ Reprovado'}\n\n"
@@ -71,11 +71,4 @@ def generate_md(base, bonus, penalty,final_score,feedback_file="feedback.json"):
     feedback += "\n---\n"
     feedback += "Continue praticando e caprichando no código. Cada detalhe conta! 💪\n"
 
-    # Write the feedback to the Markdown file
-    report_path = "relatorio.md"
-    with open(report_path, "w", encoding="utf-8") as file:
-        file.write(feedback)
-
-    print("Relatório foi gerado com sucesso!")
-
-    return report_path
+    return feedback
