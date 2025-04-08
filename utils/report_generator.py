@@ -1,7 +1,7 @@
 import json
 import os
 from datetime import datetime
-
+from utils.path import Path
 def get_key_value(list, name):
     for item in list:
         for key in item:
@@ -20,10 +20,12 @@ def generate_md(base, bonus, penalty,final_score,author,feedback_file="feedback.
     :return: A Markdown formatted string with feedback.
     """
 
-    # Load feedback data from the JSON file
-    with open(feedback_file, "r", encoding="utf-8") as file:
-        tests_feedback = json.load(file)
+    path = Path("..", "")
 
+    # Load feedback data from the JSON file
+    with open(path.getFilePath(feedback_file), "r", encoding="utf-8") as file:
+        tests_feedback = json.load(file)
+        return tests_feedback
     passed = True if final_score >= 70 else False
     # Initialize feedback
     feedback = f"# 🧪 Relatório de Avaliação – Autograder HTML - {author}\n\n"
