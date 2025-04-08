@@ -23,8 +23,8 @@ class Scorer:
         return final_score
     def get_feedback(self):
         base_dict = {"passed":self.base[0],"failed":self.base[1]}
-        bonus_dict = {"passed":self.bonus[0],"failed":self.bonus[0]}
-        penalty_dict = {"passed":self.penalty[0],"failed":self.penalty[0]}
+        bonus_dict = {"passed":self.bonus[0],"failed":self.bonus[1]}
+        penalty_dict = {"passed":self.penalty[0],"failed":self.penalty[1]}
         return generate_md(base_dict,bonus_dict,penalty_dict,self.final_score,self.author)
 
     @classmethod
