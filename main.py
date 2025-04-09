@@ -16,9 +16,9 @@ with open("index.html","r") as f:
 scorer = Scorer.create_with_scores("tests",author,"test_base.py","test_bonus.py","test_penalty.py")
 final_score = scorer.final_score
 print("Final score is: {}".format(final_score))
-print("Base Score -> {}".format(scorer.base_score))
-print("Penalty Score -> {}".format(scorer.penalty_score))
-print("Bonus Score -> {}".format(scorer.bonus_score))
+print("Base Score -> {}".format(scorer.base))
+print("Penalty Score -> {}".format(scorer.penalty))
+print("Bonus Score -> {}".format(scorer.bonus))
 
 
 feedback = scorer.get_feedback()
