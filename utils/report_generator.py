@@ -31,7 +31,7 @@ def generate_md(base, bonus, penalty,final_score,author,feedback_file="feedback.
     # Initialize feedback
     feedback = f"# 🧪 Relatório de Avaliação – Autograder HTML - {author}\n\n"
     feedback += f"**Data:** {datetime.now().strftime('%d/%m/%Y %H:%M')}\n\n"
-    feedback += f"**Nota Final:** `{format(final_score,".2f")}/100`\n"
+    feedback += f"**Nota Final:** `{format(final_score,'.2f')}/100`\n"
     feedback += f"**Status:** {'✅ Aprovado' if passed else '❌ Reprovado'}\n\n"
     feedback += "---\n"
 
