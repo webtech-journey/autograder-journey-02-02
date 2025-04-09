@@ -1,7 +1,7 @@
 from grading.grader import get_test_results,get_score
 from utils.path import Path
 from utils.report_generator import generate_md
-
+from time import sleep
 
 class Scorer:
     def __init__(self,test_folder,author):
@@ -34,5 +34,6 @@ class Scorer:
         scorer.set_bonus_score(bonus_file)
         scorer.set_penalty_score(penalty_file)
         scorer.set_final_score()
+        sleep(5)
         return scorer
 
