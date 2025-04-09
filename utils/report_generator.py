@@ -4,7 +4,9 @@ from datetime import datetime
 from utils.path import Path
 def get_key_value(list, name):
     for item in list:
+        print("Item is {}".format(item))
         for key in item:
+            print("Key is {}".format(key))
             if key == name:
                 return item[key]
 def generate_md(base, bonus, penalty,final_score,author,feedback_file="feedback.json"):
