@@ -8,6 +8,7 @@ def get_key_value(list, name):
         for key in item:
             print("Key is {}".format(key))
             if key == name:
+                print("😍😍 ITEM IS EQUAL NAME")
                 return item[key]
 def generate_md(base, bonus, penalty,final_score,author,feedback_file="feedback.json"):
     """
