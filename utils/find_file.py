@@ -1,7 +1,7 @@
 import os
 
 def find_file_by_extension(file,extension):
-    current_directory = os.path.dirname(os.path.abspath(file))
+    current_directory = os.path.dirname(file)
     for filename in os.listdir(current_directory):
         if filename.endswith(extension):
             return filename
