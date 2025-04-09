@@ -61,8 +61,8 @@ def generate_md(base, bonus, penalty,final_score,author,feedback_file="feedback.
 
     # Penalty Feedback
     feedback += "\n## ❌ Problemas Detectados (Descontos de até -30%)\n"
-    if len(penalty["failed"]) != 5:
-        feedback += f"- Foram encontrados `{len(penalty['failed'])}` problemas que acarretam descontos. Veja abaixo os testes penalizados:\n"
+    if len(penalty["passed"]) > 0 :
+        feedback += f"- Foram encontrados `{len(penalty['passed'])}` problemas que acarretam descontos. Veja abaixo os testes penalizados:\n"
         for failed_test in penalty["passed"]:
             # Get the feedback for failed penalty tests
             failed_feedback = get_key_value(tests_feedback["penalty_tests"],failed_test)[0]  # Failed feedback

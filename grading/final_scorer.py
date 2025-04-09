@@ -34,6 +34,6 @@ class Scorer:
         scorer.set_bonus_score(bonus_file)
         scorer.set_penalty_score(penalty_file)
         scorer.set_final_score()
-        sleep(5)
+        sleep(2)
         return scorer
 
