@@ -1,14 +1,15 @@
 import os
 from bs4 import BeautifulSoup
-
+from utils.find_file import find_file_by_extension
 
 # === Helpers ===
-def load_html(file_path="index.html"):
+def load_html():
     """
     Loads and parses the HTML file using BeautifulSoup.
     Returns (soup, None) if successful, or (None, error_message) if file not found.
     """
-    if not os.path.exists(file_path):
+    file_path = find_file_by_extension(__file__, '.html')
+    if not file_path:
         return None, "❌ File 'index.html' not found"
     with open(file_path, "r", encoding="utf-8") as file:
         return BeautifulSoup(file.read(), "html.parser"), None
