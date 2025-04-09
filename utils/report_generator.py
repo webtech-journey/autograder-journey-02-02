@@ -35,12 +35,14 @@ def generate_md(base, bonus, penalty,final_score,author,feedback_file="feedback.
 
     # Base Feedback (Requisitos Obrigatórios)
     feedback += "## ✅ Requisitos Obrigatórios (80%)\n"
+    print("Starting debugging.")
     if len(base["failed"]) == 0:
         feedback += "- Todos os requisitos básicos foram atendidos. Excelente trabalho!\n"
     else:
         feedback += f"- Foram encontrados `{len(base['failed'])}` problemas nos requisitos obrigatórios. Veja abaixo os testes que falharam:\n"
         for test_name in base["failed"]:
             # Get the feedback from the JSON structure based on pass/fail
+            print("Debugging json ->{}".format(tests_feedback["base_tests"]))
             passed_feedback = get_key_value(tests_feedback["base_tests"],test_name)[1]  # Failed feedback
             feedback += f"  - ⚠️ **Falhou no teste**: `{test_name}`\n"
             feedback += f"    - **Melhoria sugerida**: {passed_feedback}\n"
