@@ -15,7 +15,7 @@ with open("index.html","r") as f:
 
 scorer = Scorer.create_with_scores("tests",author,"test_base.py","test_bonus.py","test_penalty.py")
 final_score = scorer.final_score
-
+print("Final score is: {}".format(final_score))
 
 
 feedback = scorer.get_feedback()
