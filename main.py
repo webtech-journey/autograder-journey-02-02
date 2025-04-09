@@ -10,18 +10,13 @@ args = parser.parse_args()
 github_token = args.token
 author = os.getenv("GITHUB_ACTOR")
 
-with open("index.html","r") as f:
-    file = f.read()
 
 scorer = Scorer.create_with_scores("tests",author,"test_base.py","test_bonus.py","test_penalty.py")
 final_score = scorer.final_score
-print("Final score is: {}".format(final_score))
-print("Base Score -> {}".format(scorer.base))
-print("Penalty Score -> {}".format(scorer.penalty))
-print("Bonus Score -> {}".format(scorer.bonus))
 
 
 feedback = scorer.get_feedback()
-overwrite_report_in_repo(new_content=feedback)
+overwrite_report_in_repo(github_token,new_content=feedback)
+
 notify_classroom(final_score, github_token)
 
