@@ -5,6 +5,7 @@ from utils.path import Path
 def get_key_value(list, name):
     for item in list:
         print("Item is {}".format(item))
+        print("Name is {}".format(name))
         for key in item:
             print("Key is {}".format(key))
             if key == name:
